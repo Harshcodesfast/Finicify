@@ -1,0 +1,26 @@
+import MainSection from "../components/MainSection";
+import Navbar from "../components/NavBar";
+import Sidebar from "../components/SideBar";
+import { useSidebar } from "../context/SidebarContext";
+
+const Dashboard = () => {
+  const { collapsed } = useSidebar();
+  return (
+    <div className="min-h-screen  z-10 container mx-auto px-8 py-10 flex flex-col gap-10 ">
+      <div className="absolute top-[-100px] right-[10%] w-[1100px] h-[850px] rounded-full bg-[radial-gradient(ellipse_at_60%_20%,rgba(41,87,120,0.85)_0%,rgba(41,87,120,0.55)_35%,rgba(0,0,0,0)_75%)] blur-[160px] opacity-95"></div>
+
+      <Sidebar />
+      {/* Main Area */}
+      <div
+        className={`flex  flex-col transition-all duration-300 ${
+          collapsed ? "ml-20 w-[calc(100%-5rem)]" : "ml-64 w-[calc(100%-16rem)]"
+        }`}
+      >
+        <Navbar />
+        <MainSection />
+      </div>
+    </div>
+  );
+};
+
+export default Dashboard;
