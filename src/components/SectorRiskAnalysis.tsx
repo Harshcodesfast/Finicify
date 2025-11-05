@@ -93,7 +93,7 @@ const SectorRiskAnalysis: React.FC = () => {
                 animationDuration={1200}
                 animationEasing="ease-out"
               >
-                {data.sectors.map((entry, index) => (
+                {data.sectors.map((_, index) => (
                   <Cell
                     key={`cell-${index}`}
                     fill={COLORS[index % COLORS.length]}
