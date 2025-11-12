@@ -114,7 +114,7 @@ const SectorRiskAnalysis: React.FC = () => {
                   background: "rgba(20,20,30,0.9)",
                   border: "1px solid rgba(255,255,255,0.1)",
                   borderRadius: "8px",
-                  color: "#fff",
+                  color: "#000",
                 }}
               />
               <Legend
