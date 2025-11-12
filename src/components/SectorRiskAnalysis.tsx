@@ -97,7 +97,7 @@ const SectorRiskAnalysis: React.FC = () => {
                   <Cell
                     key={`cell-${index}`}
                     fill={COLORS[index % COLORS.length]}
-                    stroke="#0b0f19"
+                    stroke="#ffffff"
                     strokeWidth={hovered === index ? 3 : 1}
                     style={{
                       filter:
