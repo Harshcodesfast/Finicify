@@ -109,7 +109,17 @@ const SectorRiskAnalysis: React.FC = () => {
                   />
                 ))}
               </Pie>
-<Tooltip contentStyle={{ background: "rgba(20,20,30,0.9)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: "8px", color: "#fff", }} />
+<Tooltip
+  contentStyle={{
+    background: "rgba(20,20,30,0.9)",
+    border: "1px solid rgba(255,255,255,0.1)",
+    borderRadius: "8px",
+  }}
+  itemStyle={{ color: "#fff" }}      // Text color for tooltip items
+  labelStyle={{ color: "#ccc" }}     // Label text color (top line)
+  cursor={{ fill: "rgba(255,255,255,0.05)" }} // optional subtle hover highlight
+/>
+
 
               <Legend
                 verticalAlign="bottom"
